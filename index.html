@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busca de Filmes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Buscar Filmes</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Digite o nome do filme..." />
+      <button onclick="searchMovies()">Buscar</button>
+    </div>
+    <div class="suggestions">
+  <h2>Sugestões:</h2>
+  <div class="suggestion-list">
+    <div class="suggestion-card" onclick="autoSearch('Batman')">
+      <img src="./ASSETS/batman.jpg" alt="Batman">
+      <p>Batman</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Spider-Man')">
+      <img src="./ASSETS/spiderman.jpg" alt="Spider-Man">
+      <p>Spider-Man</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Velozes e Furiosos')">
+      <img src="./ASSETS/FURIOSOS.jpg" alt="Velozes e Furiosos">
+      <p>Velozes e Furiosos</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Matrix')">
+      <img src="./ASSETS/matrix.jpg" alt="Matrix">
+      <p>Matrix</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Didi')">
+      <img src="./ASSETS/didi.jpg" alt="Didi">
+      <p>Didi</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Godzilla')">
+      <img src="./ASSETS/godzilla.jpg" alt="Matrix">
+      <p>Godzilla</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Minecraft')">
+      <img src="./ASSETS/minecraft.jpg" alt="Minecraft">
+      <p>Minecraft</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Procurando Nemo')">
+      <img src="./ASSETS/nemo.jpg" alt="Procurando Nemo">
+      <p>Procurando Nemo</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Transformers')">
+      <img src="./ASSETS/transformers.jpg" alt="Matrix">
+      <p>Transformers</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Jujutsu Kaisen')">
+      <img src="./ASSETS/jujutsu.jpg" alt="Matrix">
+      <p>Jujutsu Kaisen</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Scooby-Doo')">
+      <img src="./ASSETS/scoobydoo.jpg" alt="Scooby-Doo">
+      <p>Scooby-Doo</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Matrix')">
+      <img src="./ASSETS/starwars.jpg" alt="Matrix">
+      <p>Star Wars</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Rick and Morty')">
+      <img src="./ASSETS/rickandmorty.jpg" alt="Rick and Morty">
+      <p>Rick and Morty</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('O Urso')">
+      <img src="./ASSETS/urso.jpg" alt="O Urso">
+      <p>O Urso</p>
+    </div>
+    <div class="suggestion-card" onclick="autoSearch('Shameless')">
+      <img src="./ASSETS/shameless.jpg" alt="Shameless">
+      <p>Shameless</p>
+    </div>
+    
+  </div>
+</div>
+
+    <div id="results" class="results"></div>
+    <div class="pagination">
+      <button onclick="changePage(-1)">⏮ Anterior</button>
+      <span id="pageIndicator">Página 1</span>
+      <button onclick="changePage(1)">Próxima ⏭</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody">Carregando...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
